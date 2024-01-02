@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air University</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #3498db; 
+            color: white; 
+            padding: 20px; 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            position: relative; 
+        }
+        
+
+        .au-heading {
+            font-style: oblique;
+            position: relative; 
+        }
+
+        .running-message {
+            position: absolute;
+            top: 40%;
+            left: 60%;;
+            transform: translateY(-50%);
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden; /* Hide overflowing content */
+            animation: runningText 2s  linear both; /* Se the animation properties */
+        }
+
+        @keyframes runningText {
+            0% { transform: translateX(100%); } /* Start off-screen to the right */
+            100% { transform: translateX(-100%); } /* Move off-screen to the left */
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px; /* Adjust the margin between navigation items */
+        }
+        .faculty-heading{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        .admissions-heading {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            padding: 0 10px;
+        }
+        .admsn-text {
+            color: black;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 0 10px;
+        }
+        .campus-heading {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            margin-right: 30%;
+        }
+        .campus-text {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 0 10px;
+        }
+        .i3-text{
+            color: white;
+            font-size: larger;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 3%;
+            margin-top:  -10%;
+        }
+        .i4-text{
+            color: white;
+            font-size: larger;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 2%;
+            margin-top:  -10%;
+        }
+        .i5-text{
+            color: white;
+            font-size: larger;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 10%;
+            margin-top:  -10%;
+        }
+        .i7-text{
+            color: white;
+            font-size: larger;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 9%;
+            margin-top:  -10%;
+        }
+        .i8-text{
+            color: white;
+            font-size: larger;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 10%;
+            margin-top: -10%;
+        }
+        .office-heading{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            padding: 0 10px;
+         }
+
+        .contact-section {
+            position: absolute;
+            margin-top: 20%;
+            margin-left: -65%;
+            width: 470%;
+            color: white;
+            font-style: oblique;
+            padding: 20px;
+            background-color: #3498db;
+        }
+.contact-section ul{
+    color: wheat;
+    margin-left: 65vw;
+    margin-top: -20vh;
+}
+.contact-section a{
+    color: wheat;
+
+}
+        /* dropdown for faculty */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+       
+        #search-bar {
+            text-align: center;
+        }
+
+        #search-bar input {
+            padding: 5px;
+        }
+        /* Added style for the right alignment */
+        .right-corner {
+            margin-left: auto;
+        }
+        /*style for image container*/
+        .image-container {
+            position: relative;
+            }
+        .image1_container {
+            position: absolute;
+            margin-left: 25%;
+        }
+        .image2-container {
+            position: absolute;
+            margin-left: -30%;
+        }
+        .image3-container{
+            position:absolute;
+            margin-left: 17%;
+        }
+        .image4-container{
+            position: absolute;
+            margin-left: -9%;
+        }
+        .image5-container{
+            position: absolute;
+            margin-left: -36%;
+        }
+        .image6-container{
+            position: absolute;
+            margin-left: 14.2%;
+            margin-top: 15%;
+        }
+        .image7-container{
+            position: absolute;
+            margin-left: 30%;
+            margin-top: 0%;
+        }
+        .image8-container{
+            position: absolute;
+            margin-left: 156%;
+            margin-top: 0%;
+        }
+        .logo {
+            margin-right: 10px;
+        }
+        footer {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 0 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            opacity: 0; /* Initially hide the footer */
+            transition: opacity 1s ease-in-out; /* Add a smooth transition effect */
+        }
+
+        body:hover footer {
+            opacity: 1; /* Show the footer when hovering over the body */
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1 class="au-heading"><img class="logo" src="logo.png" alt="AU Logo" width="60px">AIR UNIVERSITY</h1>
+            <div class="running-message"><i>Welcome to Air University! </i></div>
+            <nav class="right-corner">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <div class="dropdown">
+                <a href="#">Faculty</a>
+            </div>
+                <a href="#">Admissions</a>
+                <a href="#">Campuse</a>
+                <a href="#">Research</a>
+                <a href="#">Offices</a>
+                <a href="#">Admission</a>
+                <a href="#">Counseling & Advisory</a>
+                <a href="#">Contact Us</a>
+            </nav>
+        </div>
+        
+        <div id="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="button" class="btn">Search</button>
+        </div>
+    </header>
+
+    <div class="image-container">
+        <img src="air.wali.jpeg" alt="Air University Image" width="100%">
+    </div>
+    <h1 class="admissions-heading"><b><a href="#">Admissions</a></b></h1>
+    <div class="admsn-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In error explicabo repudiandae non consectetur, reprehenderit, ducimus doloribus aliquid repellendus ullam neque vero.
+        <br> Vitae officia nam soluta! Tempore accusantium illum earum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, rem?</br></p></div>
+
+        <div class="image1_container">
+            <img src="image1.jpg" alt="image" width="70%" >
+            <br><br> Lorem ipsum  dolor, sit  amet consectetur adipisicing elit. Click here :   <a href="http://127.0.0.1:5500/index.html">www.admissions.au.pk</a>
+            <h1 class="campus-heading"><b><a href="#">Campus</a></b></h1>
+    
+            <div class="image2-container">
+            <div class="campus-text"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, quasi a. Laborum nam atque quam harum necessitatibus ducimus impedit doloribus consectetur officia numquam dolores corporis debitis totam illo eius veritatis explicabo ipsa fugiat commodi, autem deserunt nulla reprehenderit minima cum. Veniam necessitatibus numquam cupiditate pariatur.
+            </p>     
+            <a href="http://127.0.0.1:5500/index.html"><img src="image2.jpg" alt="image" width="100%" class="campus-text"></a><p>To know about our campuses, click on the given link below:</p>
+            <a href="http://127.0.0.1:5500/index.html">www.campusinformation.au,pk</a><br>
+            <h1 class="faculty-heading"><b><a href="#">Faculties</a></b></h1>
+            <span class="image3-container">
+                <a href="http://127.0.0.1:5500/index.html"><img src="avionics.jpg" alt="image" ></a>
+                <div class="i3-text">Faculty of Avionics</div>
+            </span>
+            <span class="image4-container">
+                <a href="http://127.0.0.1:5500/index.html"><img src="heakth.jpg" alt="image" ></a>
+                <div class="i4-text">Faculty of Health Science</div>
+            </span>
+            <span class="image5-container">
+                <a href="http://127.0.0.1:5500/index.html"><img src="basic.jpg" alt="image" width="107%"></a>
+                <div class="i5-text">Faculty of Basic Science</div>
+            </span>
+        </div>
+        <div class="image6-container">
+            <a href="http://127.0.0.1:5500/index.html"><img src="engineering.jpg" alt="image" ></a>  
+            
+            <span class="image7-container">
+                <a href="http://127.0.0.1:5500/index.html"><img src="social.jpg" alt="image"></a>
+                <div class="i7-text">Faculty of Social Science</div>
+            </span>
+            <span class="image8-container">
+              <a href="http://127.0.0.1:5500/index.html"><img src="aerospace.jpg" alt="image"></a>
+                <div class="i8-text">Faculty of Aerospace</div>
+            </span>
+            
+            <div class="contact-section">
+                <h1 class="au-heading"><img class="logo" src="logo.png" alt="AU Logo" width="60px">AIR UNIVERSITY</h1>
+                <p>Email: contact@airuniversity.edu</p>
+                <p>Phone: +92 (122) 456-7890 </p>
+                    <p>For more Contact: SAJJAD SAKHI<ul>
+                    <li><a href="">Home</a></li><br>
+                    <li><a href="">About</a></li><br>
+                    <li><a href="">Contact us</a></li><br>
+                    <li><a href="">Support</a></li><br>
+                    <li><a href="">FAQs</a></li><br>
+                </ul></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 Air University. All rights reserved.</p>
+        </footer>
+        
+</body>
+</html>
